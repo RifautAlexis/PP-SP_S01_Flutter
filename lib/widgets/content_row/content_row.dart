@@ -5,7 +5,7 @@ class ContentRowWidget extends StatelessWidget {
   final String title;
   final List<OverviewMusic> overviewsMusic;
 
-  ContentRowWidget({required this.title, required this.overviewsMusic});
+  ContentRowWidget({required this.title, required this.overviewsMusic}) : super();
 
   @override
   Widget build(BuildContext context) {
