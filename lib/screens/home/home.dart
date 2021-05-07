@@ -31,8 +31,9 @@ class HomeWidget extends GetView<HomeController> {
           ),
         ),
         body: ContentRowWidget(
-            title: "Created for you !",
-            overviewsMusic: controller.overviewsMusic),
+          title: "Created for you !",
+          overviewsMusic: controller.overviewsMusic,
+        ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.greenAccent,
           items: [
