@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:pp_sp_s01_flutter/widgets/backbone/backbone_controller.dart';
 
-class BackboneWidget extends StatelessWidget {
+class BackboneWidget extends GetView<BackboneController> {
   final Widget body;
 
   const BackboneWidget({required this.body}) : super();
@@ -24,22 +26,22 @@ class BackboneWidget extends StatelessWidget {
           ),
         ),
         body: body,
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.greenAccent,
-          items: [
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: "Search",
-            ),
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.storage),
-              label: "Library",
-            ),
-          ],
+        bottomNavigationBar: Obx(
+          () => BottomNavigationBar(
+            currentIndex: controller.currentScreenIndex.value,
+            onTap: (int index) => controller.setScreenIndex(index),
+            backgroundColor: Colors.greenAccent,
+            items: [
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: "Home",
+              ),
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.search),
+                label: "Search",
+              ),
+            ],
+          ),
         ),
       ),
     );
