@@ -6,7 +6,7 @@ import 'package:pp_sp_s01_flutter/widgets/content_row/content_row.dart';
 
 import 'home_controller.dart';
 
-class HomeWidget extends GetView<HomeController> {
+class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
