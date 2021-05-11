@@ -13,3 +13,21 @@ class CustomTheme {
     );
   }
 }
+
+extension CustomTextStyles on TextTheme {
+  TextStyle get titleSearchedElement {
+    return TextStyle(
+      fontSize: 12.0,
+      fontWeight: FontWeight.normal,
+      color: Colors.white,
+    );
+  }
+
+  TextStyle get subtitleSearchedElement {
+    return TextStyle(
+      fontSize: 10.0,
+      fontWeight: FontWeight.normal,
+      color: Colors.grey[500],
+    );
+  }
+}

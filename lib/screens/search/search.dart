@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:pp_sp_s01_flutter/screens/search/search_controller.dart';
+import 'package:pp_sp_s01_flutter/theme/theme.dart';
 import 'package:pp_sp_s01_flutter/widgets/backbone/backbone.dart';
 import 'package:pp_sp_s01_flutter/widgets/custom_appbar/customAppbar.dart';
 import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar.dart';
@@ -31,26 +32,31 @@ class SearchScreen extends StatelessWidget {
 
   Widget _buildSearchResult(Video video) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Expanded(
-              child: Image.network(
-                video.thumbnails.lowResUrl,
-                width: double.infinity,
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ],
+        Image.network(
+          video.thumbnails.highResUrl,
+          width: double.infinity,
+          // fit: BoxFit.contain,
+          fit: BoxFit.fitWidth,
         ),
-        Text(video.title),
-        Row(children: [
-          Text(video.author),
-          Text(" - "),
-          Text("${video.engagement.viewCount.toString()} views"),
-          Text(" - "),
-          Text(DateFormat('dd-MM-yyyy').format(video.uploadDate!).toString()),
-        ],)
+        Container(
+          padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                video.title,
+                style: Get.textTheme.titleSearchedElement,
+              ),
+              SizedBox(height: 5.0),
+              Text(
+                "${video.author}  -  ${video.engagement.viewCount.toString()} views - ${DateFormat('dd-MM-yyyy').format(video.uploadDate!).toString()}",
+                style: Get.textTheme.subtitleSearchedElement,
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
