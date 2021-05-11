@@ -1,6 +1,3 @@
-import 'dart:convert';
-
-import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
@@ -25,15 +22,5 @@ class SearchAppbarController extends GetxController {
     var yt = YoutubeExplode();
     var results = await yt.search.getVideos(value);
     searchResults.value = results;
-    // for (var video in results) {
-    //   print("==========");
-    //   print(video.title);
-    //   print(video.author);
-    //   print(video.description);
-    //   print(video.publishDate);
-    //   print(video.uploadDate);
-    //   print(video.url);
-    //   print("==========");
-    // }
   }
 }

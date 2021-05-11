@@ -37,7 +37,6 @@ class SearchScreen extends StatelessWidget {
         Image.network(
           video.thumbnails.highResUrl,
           width: double.infinity,
-          // fit: BoxFit.contain,
           fit: BoxFit.fitWidth,
         ),
         Container(
