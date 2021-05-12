@@ -34,10 +34,28 @@ class SearchScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.network(
-          video.thumbnails.highResUrl,
-          width: double.infinity,
-          fit: BoxFit.fitWidth,
+        Stack(
+          alignment: Alignment.bottomRight,
+          children: [
+            Image.network(
+              video.thumbnails.highResUrl,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 10.0, 10.0),
+              padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
+              color: Colors.black,
+              child: Text(
+                searchController.formatDuration(video.duration!),
+                style: const TextStyle(
+                  fontSize: 10.0,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
         ),
         Container(
           padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 15.0),

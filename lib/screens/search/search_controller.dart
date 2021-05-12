@@ -6,4 +6,8 @@ class SearchController extends GetxController {
   void onInit() {
     super.onInit();
   }
+
+  formatDuration(Duration duration) {
+    return duration.toString().split('.').first.padLeft(8, "0");
+  }
 }
