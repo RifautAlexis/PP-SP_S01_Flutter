@@ -11,7 +11,7 @@ class HomeScreen extends GetView<HomeController> {
     return BackboneWidget(
       body: ContentRowWidget(
         title: "Created for you !",
-        overviewsMusic: controller.overviewsMusic,
+        overviewsMusic: controller.musicOverviews,
       ),
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pp_sp_s01_flutter/models/overview_music.dart';
+import 'package:pp_sp_s01_flutter/models/music_overview.dart';
 
 class ContentRowWidget extends StatelessWidget {
   final String title;
-  final List<OverviewMusic> overviewsMusic;
+  final List<MusicOverview> overviewsMusic;
 
   ContentRowWidget({required this.title, required this.overviewsMusic}) : super();
 
