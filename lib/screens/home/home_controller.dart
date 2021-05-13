@@ -4,7 +4,7 @@ import 'package:pp_sp_s01_flutter/models/music_overview.dart';
 
 class HomeController extends GetxController {
   
-  var overviewsMusic = <MusicOverview>[].obs;
+  var musicOverviews = <MusicOverview>[].obs;
 
   @override
   void onInit() {
@@ -13,7 +13,7 @@ class HomeController extends GetxController {
   }
 
   getContentForOverview() {
-    overviewsMusic.assignAll(musicOverviewsMock);
+    musicOverviews.assignAll(musicOverviewsMock);
   }
 
 }
