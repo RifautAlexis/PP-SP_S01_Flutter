@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:pp_sp_s01_flutter/mocks/overview_music_mock.dart';
-import 'package:pp_sp_s01_flutter/models/overview_music.dart';
+import 'package:pp_sp_s01_flutter/mocks/music_overview_mock.dart';
+import 'package:pp_sp_s01_flutter/models/music_overview.dart';
 
 class HomeController extends GetxController {
   
-  var overviewsMusic = <OverviewMusic>[].obs;
+  var overviewsMusic = <MusicOverview>[].obs;
 
   @override
   void onInit() {
@@ -13,7 +13,7 @@ class HomeController extends GetxController {
   }
 
   getContentForOverview() {
-    overviewsMusic.assignAll(overviewsMusicMock);
+    overviewsMusic.assignAll(musicOverviewsMock);
   }
 
 }
