@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
@@ -11,14 +12,15 @@ class SearchAppbarController extends GetxController {
   void onInit() {
     super.onInit();
 
-    debounce(searchedValue, (String value) => _search(value), time: Duration(milliseconds: 500));
+    debounce(searchedValue, (String value) => search(value), time: Duration(milliseconds: 500));
   }
 
   setSearchedValue(String value) {
     searchedValue.value = value;
   }
 
-  _search(String value) async {
+  @visibleForTesting
+  search(String value) async {
     var yt = YoutubeExplode();
     var results = await yt.search.getVideos(value);
     searchResults.value = results;

@@ -29,7 +29,7 @@ class VideoOverviewWidget extends GetView<VideoOverviewController> {
               padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
               color: Colors.black,
               child: Text(
-                controller.formatDuration(video.duration!),
+                controller.formatDuration(video.duration),
                 style: const TextStyle(
                   fontSize: 10.0,
                   fontWeight: FontWeight.normal,

@@ -8,7 +8,12 @@ class VideoOverviewController extends GetxController {
     super.onInit();
   }
 
-  formatDuration(Duration duration) {
-    return duration.toString().split('.').first.padLeft(8, "0");
+  String formatDuration(Duration? duration) {
+    if(duration != null) {
+      return duration.toString().split('.').first.padLeft(8, "0");
+    } else {
+      return "NaN";
+    }
+    
   }
 }
