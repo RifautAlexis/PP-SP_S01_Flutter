@@ -8,7 +8,8 @@ void main() {
   late SearchAppbarController searchAppbarController;
 
   setUp(() {
-    searchAppbarController = Get.put<SearchAppbarController>(SearchAppbarController());
+    searchAppbarController =
+        Get.put<SearchAppbarController>(SearchAppbarController());
   });
 
   group('setSearchedValue', () {

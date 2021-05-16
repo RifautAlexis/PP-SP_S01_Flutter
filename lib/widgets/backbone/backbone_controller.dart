@@ -11,7 +11,7 @@ class BackboneController extends GetxController {
   }
 
   setScreenIndex(int newIndex) {
-    if(newIndex >= 0 && newIndex <= 1) {
+    if (newIndex >= 0 && newIndex <= 1) {
       currentScreenIndex.value = newIndex;
     }
   }

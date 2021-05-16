@@ -12,7 +12,6 @@ class BackboneWidget extends GetView<BackboneController> {
 
   @override
   Widget build(BuildContext context) {
-
     // SystemChrome.setSystemUIOverlayStyle(
     //   SystemUiOverlayStyle(
     //     statusBarColor: Colors.transparent,

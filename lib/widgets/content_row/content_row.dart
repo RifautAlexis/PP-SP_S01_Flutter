@@ -5,7 +5,8 @@ class ContentRowWidget extends StatelessWidget {
   final String title;
   final List<MusicOverview> overviewsMusic;
 
-  ContentRowWidget({required this.title, required this.overviewsMusic}) : super();
+  ContentRowWidget({required this.title, required this.overviewsMusic})
+      : super();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,11 @@ class ContentRowWidget extends StatelessWidget {
 
     return Column(
       children: [
-        Image.network(overviewsMusic[index].pictureUrl, height: 50.0, width: 50.0,),
+        Image.network(
+          overviewsMusic[index].pictureUrl,
+          height: 50.0,
+          width: 50.0,
+        ),
         title,
         Text(description),
       ],

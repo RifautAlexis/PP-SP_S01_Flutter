@@ -8,11 +8,11 @@ void main() {
   setUp(() {
     backboneController = Get.put<BackboneController>(BackboneController());
   });
-  
+
   setUpAll(() {
     Get.testMode = true;
   });
-  
+
   // tearDown(() {
   //   Get.delete<BackboneController>();
   // });
@@ -23,23 +23,29 @@ void main() {
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, equals(2));
+      expect(backboneController.currentScreenIndex.value, equals(5));
     });
 
-    test('should not assign the param (< 0) to the property "currentScreenIndex"', () {
+    test(
+        'should not assign the param (< 0) to the property "currentScreenIndex"',
+        () {
       int newIndex = -1;
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
+      expect(
+          backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
     });
 
-    test('should not assign the param (> 1) to the property "currentScreenIndex"', () {
+    test(
+        'should not assign the param (> 1) to the property "currentScreenIndex"',
+        () {
       int newIndex = 2;
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
+      expect(
+          backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
     });
   });
 }

@@ -4,7 +4,6 @@ import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar_controller
 import 'package:pp_sp_s01_flutter/widgets/video_overview/video_overview_controller.dart';
 
 class SearchBind extends Bindings {
-
   @override
   void dependencies() {
     Get.lazyPut<BackboneController>(() => BackboneController());

@@ -6,13 +6,15 @@ import 'package:youtube_explode_dart/src/reverse_engineering/responses/search_pa
 
 class SearchAppbarController extends GetxController {
   var searchedValue = "".obs;
-  Rx<SearchList> searchResults = SearchList([], SearchPage(null, ""), YoutubeHttpClient()).obs;
+  Rx<SearchList> searchResults =
+      SearchList([], SearchPage(null, ""), YoutubeHttpClient()).obs;
 
   @override
   void onInit() {
     super.onInit();
 
-    debounce(searchedValue, (String value) => search(value), time: Duration(milliseconds: 500));
+    debounce(searchedValue, (String value) => search(value),
+        time: Duration(milliseconds: 500));
   }
 
   setSearchedValue(String value) {
