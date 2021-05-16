@@ -23,7 +23,7 @@ void main() {
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, equals(22));
+      expect(backboneController.currentScreenIndex.value, equals(2));
     });
 
     test('should not assign the param (< 0) to the property "currentScreenIndex"', () {
