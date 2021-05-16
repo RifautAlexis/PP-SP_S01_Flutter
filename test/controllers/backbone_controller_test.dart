@@ -8,48 +8,38 @@ void main() {
   setUp(() {
     backboneController = Get.put<BackboneController>(BackboneController());
   });
-
+  
+  setUpAll(() {
+    Get.testMode = true;
+  });
+  
   // tearDown(() {
   //   Get.delete<BackboneController>();
   // });
 
   group('setScreenIndex', () {
     test('should assign the param to the property "currentScreenIndex"', () {
+      int newIndex = 1;
+
+      backboneController.setScreenIndex(newIndex);
+
+      expect(backboneController.currentScreenIndex.value, equals(newIndex));
+    });
+
+    test('should not assign the param (< 0) to the property "currentScreenIndex"', () {
+      int newIndex = -1;
+
+      backboneController.setScreenIndex(newIndex);
+
+      expect(backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
+    });
+
+    test('should not assign the param (> 1) to the property "currentScreenIndex"', () {
       int newIndex = 2;
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, newIndex);
+      expect(backboneController.currentScreenIndex.value, isNot(equals(newIndex)));
     });
   });
-
-  // group('navigateTo', () {
-  //   test('should navigate to route "/"', () async {
-  //     Get.testMode = true;
-  //     int newIndex = 0;
-
-  //     backboneController.setScreenIndex(newIndex);
-  //     await Future.delayed(Duration.zero);
-  //     expect(Get.currentRoute, "/");
-  //   });
-
-  //   test('should navigate to route "/search"', () async {
-  //     Get.testMode = true;
-  //     int newIndex = 1;
-
-  //     backboneController.setScreenIndex(newIndex);
-  //     await Future.delayed(Duration.zero);
-
-  //     expect(Get.currentRoute, "/search");
-  //   });
-
-  //   test('should not navigate and stay to route "/"', () async {
-  //     Get.testMode = true;
-  //     int newIndex = 3;
-
-  //     backboneController.setScreenIndex(newIndex);
-  //     await Future.delayed(Duration.zero);
-  //     expect(Get.currentRoute, "/");
-  //   });
-  // });
 }

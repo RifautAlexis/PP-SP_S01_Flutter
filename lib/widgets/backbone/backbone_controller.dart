@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BackboneController extends GetxController {
@@ -11,7 +12,9 @@ class BackboneController extends GetxController {
   }
 
   setScreenIndex(int newIndex) {
-    currentScreenIndex.value = newIndex;
+    if(newIndex >= 0 && newIndex <= 1) {
+      currentScreenIndex.value = newIndex;
+    }
   }
 
   navigateTo() {
