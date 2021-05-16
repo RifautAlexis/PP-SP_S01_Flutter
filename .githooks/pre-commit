@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+export PATH="$PATH:/Users/alexis/Desktop/flutter/bin"
+
+printf "\e[33;1m%s\e[0m\n" 'Running the Flutter formatter'
+flutter format .
+printf "\e[33;1m%s\e[0m\n" 'Finished running the Flutter formatter'
