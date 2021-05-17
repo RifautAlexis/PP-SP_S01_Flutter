@@ -23,7 +23,7 @@ void main() {
 
       backboneController.setScreenIndex(newIndex);
 
-      expect(backboneController.currentScreenIndex.value, equals(5));
+      expect(backboneController.currentScreenIndex.value, equals(newIndex));
     });
 
     test(
