@@ -12,6 +12,7 @@ void main() {
 
   group('init value', () {
     test('overviewsMusic should be equal to musicOverviewsMock on init', () {
+      // ignore: invalid_use_of_protected_member
       expect(homeController.musicOverviews.value, musicOverviewsMock);
     });
   });

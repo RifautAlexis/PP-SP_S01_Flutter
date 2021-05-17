@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:pp_sp_s01_flutter/theme/theme.dart';
 import 'package:pp_sp_s01_flutter/widgets/backbone/backbone.dart';
 import 'package:pp_sp_s01_flutter/widgets/custom_appbar/customAppbar.dart';
 import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar.dart';
 import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar_controller.dart';
 import 'package:pp_sp_s01_flutter/widgets/video_overview/video_overview.dart';
-import 'package:youtube_explode_dart/youtube_explode_dart.dart';
-import 'package:intl/intl.dart';
 
 class SearchScreen extends StatelessWidget {
   final searchAppbarController = Get.put(SearchAppbarController());

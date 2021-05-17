@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
-import 'package:youtube_explode_dart/src/reverse_engineering/responses/search_page.dart';
+import 'package:youtube_explode_dart/src/reverse_engineering/responses/search_page.dart'; // ignore: 
 
 class SearchAppbarController extends GetxController {
   var searchedValue = "".obs;
