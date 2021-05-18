@@ -10,17 +10,17 @@ class BackboneController extends GetxController {
     ever(currentScreenIndex, (_) => navigateTo());
   }
 
-  setScreenIndex(int newIndex) {
+  void setScreenIndex(int newIndex) {
     if (newIndex >= 0 && newIndex <= 1) {
       currentScreenIndex.value = newIndex;
     }
   }
 
-  navigateTo() {
+  void navigateTo() {
     if (currentScreenIndex.value == 0) {
-      Get.toNamed("/");
+      Get.toNamed('/');
     } else if (currentScreenIndex.value == 1) {
-      Get.toNamed("/search");
+      Get.toNamed('/search');
     }
   }
 }

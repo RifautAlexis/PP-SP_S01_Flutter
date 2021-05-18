@@ -19,7 +19,7 @@ void main() {
 
   group('setScreenIndex', () {
     test('should assign the param to the property "currentScreenIndex"', () {
-      int newIndex = 1;
+      const newIndex = 1;
 
       backboneController.setScreenIndex(newIndex);
 
@@ -29,7 +29,7 @@ void main() {
     test(
         'should not assign the param (< 0) to the property "currentScreenIndex"',
         () {
-      int newIndex = -1;
+      const newIndex = -1;
 
       backboneController.setScreenIndex(newIndex);
 
@@ -40,7 +40,7 @@ void main() {
     test(
         'should not assign the param (> 1) to the property "currentScreenIndex"',
         () {
-      int newIndex = 2;
+      const newIndex = 2;
 
       backboneController.setScreenIndex(newIndex);
 

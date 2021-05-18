@@ -11,7 +11,7 @@ class SearchAppbarWidget extends GetView<SearchAppbarController> {
       key: Key('SearchBarTextField'),
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        hintText: "Search...",
+        hintText: 'Search...',
         enabledBorder: InputBorder.none,
         focusedBorder: InputBorder.none,
         border: InputBorder.none,

@@ -11,7 +11,7 @@ class HomeController extends GetxController {
     super.onInit();
   }
 
-  getContentForOverview() {
+  void getContentForOverview() {
     musicOverviews.assignAll(musicOverviewsMock);
   }
 }

@@ -5,9 +5,9 @@ import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 import 'package:youtube_explode_dart/src/reverse_engineering/responses/search_page.dart'; // ignore:
 
 class SearchAppbarController extends GetxController {
-  var searchedValue = "".obs;
+  var searchedValue = ''.obs;
   Rx<SearchList> searchResults =
-      SearchList([], SearchPage(null, ""), YoutubeHttpClient()).obs;
+      SearchList([], SearchPage(null, ''), YoutubeHttpClient()).obs;
 
   @override
   void onInit() {
@@ -17,12 +17,12 @@ class SearchAppbarController extends GetxController {
         time: Duration(milliseconds: 500));
   }
 
-  setSearchedValue(String value) {
+  void setSearchedValue(String value) {
     searchedValue.value = value;
   }
 
   @visibleForTesting
-  search(String value) async {
+  void search(String value) async {
     var yt = YoutubeExplode();
     var results = await yt.search.getVideos(value);
     searchResults.value = results;

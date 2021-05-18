@@ -26,7 +26,7 @@ class ContentRowWidget extends StatelessWidget {
   }
 
   Widget _buildElement(int index) {
-    final String description = overviewsMusic[index].artists.join(", ");
+    final description = overviewsMusic[index].artists.join(', ');
     final Widget title = overviewsMusic[index].title != null
         ? Text(overviewsMusic[index].title!)
         : Container();

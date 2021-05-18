@@ -17,7 +17,7 @@ class BackboneWidget extends GetView<BackboneController> {
     //   ),
     // );
 
-    final PreferredSize? appbar = this.appbar != null
+    final appbar = this.appbar != null
         ? PreferredSize(
             preferredSize: const Size.fromHeight(40.0),
             child: this.appbar!,
@@ -36,11 +36,11 @@ class BackboneWidget extends GetView<BackboneController> {
             items: [
               const BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: "Home",
+                label: 'Home',
               ),
               const BottomNavigationBarItem(
                 icon: Icon(Icons.search),
-                label: "Search",
+                label: 'Search',
               ),
             ],
           ),

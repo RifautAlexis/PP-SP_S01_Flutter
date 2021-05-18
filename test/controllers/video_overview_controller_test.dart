@@ -12,31 +12,31 @@ void main() {
 
   group('formatDuration', () {
     test('should return a String in hh:mm:ss', () {
-      const Duration duration = Duration(
+      const duration = Duration(
           hours: 1,
           minutes: 34,
           seconds: 25,
           milliseconds: 44,
           microseconds: 12);
-      String durationFormated =
+      final durationFormated =
           videoOverviewController.formatDuration(duration);
 
-      expect(durationFormated, equals("01:34:25"));
+      expect(durationFormated, equals('01:34:25'));
     });
 
     test('should "00:00:00" when param is an empty Duration', () {
-      const Duration duration = Duration();
+      const duration = Duration();
 
-      String durationFormated =
+      final durationFormated =
           videoOverviewController.formatDuration(duration);
 
-      expect(durationFormated, equals("00:00:00"));
+      expect(durationFormated, equals('00:00:00'));
     });
 
     test('should return "NaN" when param is a null', () {
-      String durationFormated = videoOverviewController.formatDuration(null);
+      final durationFormated = videoOverviewController.formatDuration(null);
 
-      expect(durationFormated, equals("NaN"));
+      expect(durationFormated, equals('NaN'));
     });
   });
 }

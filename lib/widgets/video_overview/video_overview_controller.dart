@@ -9,9 +9,9 @@ class VideoOverviewController extends GetxController {
 
   String formatDuration(Duration? duration) {
     if (duration != null) {
-      return duration.toString().split('.').first.padLeft(8, "0");
+      return duration.toString().split('.').first.padLeft(8, '0');
     } else {
-      return "NaN";
+      return 'NaN';
     }
   }
 }
