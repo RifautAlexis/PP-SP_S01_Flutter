@@ -18,8 +18,7 @@ void main() {
           seconds: 25,
           milliseconds: 44,
           microseconds: 12);
-      final durationFormated =
-          videoOverviewController.formatDuration(duration);
+      final durationFormated = videoOverviewController.formatDuration(duration);
 
       expect(durationFormated, equals('01:34:25'));
     });
@@ -27,8 +26,7 @@ void main() {
     test('should "00:00:00" when param is an empty Duration', () {
       const duration = Duration();
 
-      final durationFormated =
-          videoOverviewController.formatDuration(duration);
+      final durationFormated = videoOverviewController.formatDuration(duration);
 
       expect(durationFormated, equals('00:00:00'));
     });
