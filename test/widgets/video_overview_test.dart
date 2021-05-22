@@ -9,8 +9,6 @@ import 'package:pp_sp_s01_flutter/widgets/video_overview/video_overview_controll
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-
   final id = VideoId('dQw4w9WgXcQ');
   const title = 'Title 01';
   const author = 'Author 01';

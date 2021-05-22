@@ -21,31 +21,5 @@ class CustomAppBarWidget extends StatelessWidget {
       title: centralItem,
       actions: actions,
     );
-
-    // return Row(
-    //   children: [
-    //     Expanded(
-    //       child: NavigationToolbar(
-    //         middleSpacing: 10.0,
-    //         leading: Navigator.canPop(context)
-    //             ? BackButton(
-    //                 onPressed: () => Get.back(),
-    //               )
-    //             : Container(
-    //                 width: 0,
-    //                 height: 0,
-    //               ),
-    //         middle: Text("LOL"), // centralItem,
-    //         trailing: Padding(
-    //           padding: EdgeInsets.only(right: 10),
-    //           child: Row(
-    //             mainAxisSize: MainAxisSize.min,
-    //             children: [...actions!],
-    //           ),
-    //         ),
-    //       ),
-    //     ),
-    //   ],
-    // );
   }
 }

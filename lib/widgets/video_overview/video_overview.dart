@@ -21,6 +21,7 @@ class VideoOverviewWidget extends GetView<VideoOverviewController> {
           children: [
             Image.network(
               video.thumbnails.highResUrl,
+              key: Key('thumbnail'),
               width: double.infinity,
               fit: BoxFit.fitWidth,
             ),
@@ -30,6 +31,7 @@ class VideoOverviewWidget extends GetView<VideoOverviewController> {
               color: Colors.black,
               child: Text(
                 controller.formatDuration(video.duration),
+                key: Key('title'),
                 style: const TextStyle(
                   fontSize: 10.0,
                   fontWeight: FontWeight.normal,
