@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar.dart';
-import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar_controller.dart';
+// import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar_controller.dart';
 
 void main() {
   late Finder searchBarTextField;
-  late SearchAppbarController searchAppbarController;
+  // late SearchAppbarController searchAppbarController;
 
   setUp(() {
     searchBarTextField = find.byKey(Key('SearchBarTextField'));
   });
 
-  setUpAll(() {
-    searchAppbarController = Get.put(SearchAppbarController());
-  });
+  // setUpAll(() {
+  //   searchAppbarController = Get.put(SearchAppbarController());
+  // });
 
   testWidgets('Should match widgets/type composing SearchAppbarWidget',
       (WidgetTester tester) async {
