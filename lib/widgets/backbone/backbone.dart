@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:pp_sp_s01_flutter/widgets/backbone/backbone_controller.dart';
-import 'package:pp_sp_s01_flutter/widgets/custom_appbar/customAppbar.dart';
+import 'package:pp_sp_s01_flutter/widgets/custom_appbar/custom_appbar.dart';
 
 class BackboneWidget extends GetView<BackboneController> {
   final Widget body;

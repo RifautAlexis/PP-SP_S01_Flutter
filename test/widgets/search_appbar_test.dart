@@ -5,7 +5,6 @@ import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar.dart';
 import 'package:pp_sp_s01_flutter/widgets/search_appbar/search_appbar_controller.dart';
 
 void main() {
-
   late Finder searchBarTextField;
   late SearchAppbarController searchAppbarController;
 
